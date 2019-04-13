@@ -8,14 +8,15 @@
 
 .todolist {
   padding: 5px;
-  li {
+  input {
     background-color: #e8e8e8;
     border-radius: 5px;
     padding: 10px;
+    border:none;
   }
 
-  li:hover {
-    background-color: #d6d6d6;
+  input:hover {
+    background-color: #c1c1c1;
   }
 }
 
@@ -49,7 +50,11 @@
 .single-task{
   display:flex;
   margin-bottom: 10px;
-  li{
-    width:95%
+  input{
+    width:95%;
   }
+}
+
+.close{
+  margin-left: 10px
 }

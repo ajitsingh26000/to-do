@@ -22,10 +22,8 @@ class TodoItems extends Component {
     this.setState({ isMouseInside: false });
   }
 
-
-
   createTasks(task) {
-    return <SingleItem key={task.key} task={task}/>
+    return <SingleItem key={task.date} task={task}/>
   }
 
   deleteTasks(e) {
