@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import TodoItems from './TodoItems';
-import { addTodo } from '../redux/ActionCreators';
+import { addTodo, fetchTodo } from '../redux/ActionCreators';
 import { connect } from 'react-redux';
 
 const mapDispatchToProps = dispatch => ({
-  addTodo: (todo) => dispatch(addTodo(todo))
+  addTodo: (todo) => dispatch(addTodo(todo)),
+  fetchTodo: () => dispatch(fetchTodo())
 });
 
 const mapStateToProps = state => {
@@ -22,12 +23,19 @@ class TodoList extends Component {
   }
 
   handleSubmit(event) {
-    console.log(event)
+    
     this.props.addTodo(this._inputElement.value)
     event.preventDefault();
   }
 
+  componentDidMount() {
+    this.props.fetchTodo();
+    
+  }
+  
+
   render() {
+    
     return (
       <div className="todoListMain">
         <div className="header">

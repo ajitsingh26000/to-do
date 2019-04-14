@@ -23,15 +23,12 @@ class TodoItems extends Component {
   }
 
   createTasks(task) {
-    return <SingleItem key={task.date} task={task}/>
+    debugger
+    return <SingleItem key={task._id} task={task}/>
   }
 
-  deleteTasks(e) {
-    console.log(e)
-  }
   render() {
-    var toDoEntries = this.props.tasks;
-    console.log(toDoEntries)
+    var toDoEntries = this.props.tasks.todo;
     var listTasks = toDoEntries.map(this.createTasks);
 
     return (

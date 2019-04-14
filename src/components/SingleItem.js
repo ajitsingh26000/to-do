@@ -44,7 +44,7 @@ class SingleItem extends Component {
   render() {
     return (
       <div className="single-task" onClick={this.editTask} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
-        <input onChange={this.editTask} ref={(task) => this._inputElement = task} defaultValue={this.props.task.todo} type="text" name="todoTask"></input>
+        <input onChange={this.editTask} ref={(task) => this._inputElement = task} defaultValue={this.props.task.task} type="text" name="todoTask"></input>
         {this.state.isMouseInside ? <button onClick={this.deleteTasks} type="button" className="close" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> : null}
